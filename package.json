@@ -4,7 +4,7 @@
   "main": "server.js",
   "license": "MIT",
   "scripts": {
-    "start": "node server.js"
+    "serve": "node server.js"
   },
   "dependencies": {}
 }
