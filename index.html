@@ -123,7 +123,7 @@
 
     <p><span>אה, אני אוהב להיות ליד חוף הים</span></p>
     <p>
-        <sapn dir="rtl">אה, אני אוהב להיות ליד חוף הים</sapn>
+        <span dir="rtl">אה, אני אוהב להיות ליד חוף הים</span>
     </p>
     <pre>span dir :above ↑</pre>
 
@@ -185,7 +185,8 @@ main $@
                 <abbr title="World-Wide Web">WWW</abbr>
             </dfn>
         </dt>
-        <dd>The World-Wide Web (WWW) is a system of interlinked hypertext documents accessed on <a href="#def-internet">the
+        <dd>The World-Wide Web (WWW) is a system of interlinked hypertext documents accessed on <a
+                href="https://example.com">the
             Internet</a>.
         </dd>
     </dl>
@@ -257,7 +258,7 @@ main $@
     <p>The chemical formula of water: H<sub>2</sub>O</p>
     <pre>sub :above ↑</pre>
 
-    <p>The arithmetic formula for the square : x<sup>2</sup></p>
+    <p>This text is <sup>superscripted</sup></p>
     <pre>sup :above ↑</pre>
 
     <p>This article was created on
@@ -302,22 +303,458 @@ main $@
     <pre>wbr :above ↑</pre>
 
     <!--    Image and multimedia-->
-    <map name="primary">
-        <area shape="circle" href="http://example.net"/>
-        <area shape="default" nohref/>
+    <map name="infographic">
+        <area shape="poly" coords="130,147,200,107,254,219,130,228"
+              href="https://developer.mozilla.org/docs/Web/HTML"
+              target="_blank" alt="HTML"/>
+        <area shape="poly" coords="130,147,130,228,6,219,59,107"
+              href="https://developer.mozilla.org/docs/Web/CSS"
+              target="_blank" alt="CSS"/>
+        <area shape="poly" coords="130,147,200,107,130,4,59,107"
+              href="https://developer.mozilla.org/docs/Web/JavaScript"
+              target="_blank" alt="JavaScript"/>
     </map>
-    <pre>area in map :above ↑</pre>
+    <img usemap="#infographic" width="260" src="/media/mdn-info2.png" alt="MDN infographic"/>
+    <pre>img usemap :above ↑</pre>
 
-    <audio></audio>
+    <audio controls src="/media/nokia_bell.mp3">
+        Sorry, your browser doesn't support audio element.
+    </audio>
+    <pre>audio controls :above ↑</pre>
+
+    <br>
+
+    <video controls width="250">
+
+        <source src="/media/flower.webm"
+                type="video/webm">
+
+        <source src="/media/flower.mp4"
+                type="video/mp4">
+
+        Sorry, your browser doesn't support video element.
+    </video>
+
+    <br>
+
+    <video controls src="/media/friday.mp4" width="250">
+        <track default
+               kind="captions"
+               srclang="en"
+               src="/media/friday.vtt"/>
+        Sorry, your browser doesn't support video element.
+    </video>
+    <pre>track in video :above ↑</pre>
 
     <!--    Embedded content-->
+    <embed type="video/quicktime" src="/media/flower.mov" width="250">
+    <pre>embed :above ↑</pre>
+    <br>
+
+    <iframe id="inlineFrameExample"
+            title="Inline Frame Example"
+            width="300"
+            height="200"
+            src="https://www.openstreetmap.org/export/embed.html?bbox=-0.004017949104309083%2C51.47612752641776%2C0.00030577182769775396%2C51.478569861898606&layer=mapnik">
+    </iframe>
+    <pre>iframe :above ↑</pre>
+    <br>
+
+    <object type="application/pdf"
+            data="/media/Vue-3-Cheat-Sheet.pdf"
+            width="350"
+            height="500">
+        Sorry, your browser doesn't support object element.
+        <param name="foo" value="bar">
+    </object>
+    <pre>param in object :above ↑</pre>
+    <br>
+
+    <picture>
+        <source srcset="/media/surfer-240-200.jpg"
+                media="(min-width: 800px)">
+        <img src="/media/painted-hand-298-332.jpg" alt="painted-hand"/>
+    </picture>
+    <pre>source in picture :above ↑</pre>
+    <br>
+
+    <portal src="https://example.com"></portal>
+    <pre>portal :above ↑</pre>
+    <br>
     <!--    SVG and MathML-->
+    <svg viewBox="0 0 300 100" xmlns="http://www.w3.org/2000/svg" stroke="teal" fill="grey" width="300">
+        <circle cx="50" cy="50" r="40"/>
+        <circle cx="150" cy="50" r="10"/>
+
+        <svg viewBox="0 0 10 10" x="200" width="100">
+            <circle cx="5" cy="5" r="4"/>
+        </svg>
+    </svg>
+    <pre>svg :above ↑</pre>
+    <br>
+
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <mrow>
+            <mrow>
+                <msup>
+                    <mi>a</mi>
+                    <mn>2</mn>
+                </msup>
+                <mo>+</mo>
+                <msup>
+                    <mi>b</mi>
+                    <mn>2</mn>
+                </msup>
+            </mrow>
+            <mo>=</mo>
+            <msup>
+                <mi>c</mi>
+                <mn>2</mn>
+            </msup>
+        </mrow>
+    </math>
+    <pre>math :above ↑</pre>
+    <br>
     <!--    Scripting-->
+    <canvas width="300" height="100">
+        Sorry, your browser doesn't support canvas element.
+    </canvas>
+    <pre>canvas :above ↑</pre>
+    <br>
+    <script>
+      const canvas = document.querySelector('canvas');
+      const ctx = canvas.getContext('2d');
+      ctx.fillStyle = 'teal';
+      ctx.fillRect(10, 10, 100, 100);
+    </script>
+    <noscript>
+        Sorry, your browser doesn't support javascript.
+    </noscript>
     <!--    Demarcating edits-->
+    <p>“You're late!”</p>
+    <del>
+        <p>“I apologize for the delay.”</p>
+    </del>
+    <ins cite="/about" datetime="2018-05">
+        <p>“A wizard is never late …”</p>
+    </ins>
+    <pre>(del | ins) p :above ↑</pre>
+    <br>
     <!--    Table content-->
+    <table>
+        <caption>table caption</caption>
+        <thead>
+        <tr>
+            <th colspan="5">table header</th>
+        </tr>
+        </thead>
+        <colgroup>
+            <col>
+            <col span="2" style="background-color: #d7d9f2">
+            <col span="2" style="background-color: #ffe8d4">
+        </colgroup>
+        <tbody>
+        <tr>
+            <td></td>
+            <th scope="col">Batman</th>
+            <th scope="col">Robin</th>
+            <th scope="col">The Flash</th>
+            <th scope="col">Kid Flash</th>
+        </tr>
+        <tr>
+            <th scope="row">Skill</th>
+            <td>Smarts</td>
+            <td>Dex, acrobat</td>
+            <td>Super speed</td>
+            <td>Super speed</td>
+        </tr>
+        <tr>
+            <th scope="row">Skill</th>
+            <td>Smarts</td>
+            <td>Dex, acrobat</td>
+            <td>Super speed</td>
+            <td>Super speed</td>
+        </tr>
+        </tbody>
+        <tfoot>
+        <tr>
+            <th scope="row">Sum</th>
+            <td colspan="4">Sum value</td>
+        </tr>
+        </tfoot>
+    </table>
+    <pre>(caption | thead | colgroup | col | tbody | tr | th | td | tfoot) in table :above ↑</pre>
+    <br>
     <!--    Forms-->
+    <button name="button">Click me</button>
+    <br>
+
+    <label>Choose a browser from this list: <input list="browsers" name="myBrowser"/></label>
+    <datalist id="browsers">
+        <option value="Chrome">
+        <option value="Firefox">
+        <option value="Internet Explorer">
+        <option value="Opera">
+        <option value="Safari">
+    </datalist>
+    option
+    <br>
+
+    <form>
+        <fieldset>
+            <legend>Choose your favorite monster</legend>
+
+            <input type="radio" id="kraken" name="monster">
+            <label for="kraken">Kraken</label><br/>
+
+            <input type="radio" id="sasquatch" name="monster">
+            <label for="sasquatch">Sasquatch</label><br/>
+
+            <input type="radio" id="mothman" name="monster">
+            <label for="mothman">Mothman</label>
+        </fieldset>
+    </form>
+    <pre>(legend in  fieldset) in form :above ↑</pre>
+    <br>
+
+
+    <form>
+        <fieldset disabled>
+            <legend>Disabled fieldset</legend>
+            <div>
+                <label for="name1">Name: </label>
+                <input type="text" id="name1" value="Chris">
+            </div>
+            <div>
+                <label for="pwd">Archetype: </label>
+                <input type="password" id="pwd" value="Wookie">
+            </div>
+        </fieldset>
+    </form>
+    <pre>fieldset in (fieldset disabled) :above ↑</pre>
+    <br>
+
+    <label>button
+        <input type="button">
+    </label>
+    <br>
+
+    <label>checkbox
+        <input type="checkbox">
+    </label>
+    <br>
+
+    <label>color
+        <input type="color">
+    </label>
+    <br>
+
+    <label>date
+        <input type="date">
+    </label>
+    <br>
+
+    <label>datetime-local
+        <input type="datetime-local">
+    </label>
+    <br>
+
+    <label>email
+        <input type="email">
+    </label>
+    <br>
+
+    <label>file
+        <input type="file">
+    </label>
+    <br>
+
+    <label>hidden
+        <input type="hidden">
+    </label>
+    <br>
+
+    <label>image
+        <input type="image">
+    </label>
+    <br>
+
+    <label>number
+        <input type="number">
+    </label>
+    <br>
+
+    <label>password
+        <input type="password">
+    </label>
+    <br>
+
+    <label>radio
+        <input type="radio">
+    </label>
+    <br>
+
+    <label>range
+        <input type="range">
+    </label>
+    <br>
+
+    <label>reset
+        <input type="reset">
+    </label>
+    <br>
+
+    <label>search
+        <input type="search">
+    </label>
+    <br>
+
+    <label>submit
+        <input type="submit">
+    </label>
+    <br>
+
+    <label>time
+        <input type="time">
+    </label>
+    <br>
+
+    <label>url
+        <input type="url">
+    </label>
+    <br>
+
+    <label>week
+        <input type="week">
+    </label>
+    <pre>input type :above ↑</pre>
+    <br>
+
+
+    <div>
+        <input type="range" id="volume" name="volume"
+               min="0" max="11">
+        <label for="volume">Volume</label>
+    </div>
+    <pre>input min | max :above ↑</pre>
+    <br>
+
+
+    <div>
+        <input type="range" id="cowbell" name="cowbell"
+               min="0" max="100" value="90" step="10">
+        <label for="cowbell">Cowbell</label>
+    </div>
+    <pre>input step :above ↑</pre>
+    <br>
+
+    <meter min="20" max="100" value="25">35 degrees</meter>
+    <pre>meter (min && max && value) :above ↑</pre>
+    <br>
+
+    <label for="file">File progress:</label>
+    <progress id="file" max="100" value="70"> 70% </progress>
+    <pre>progress (max && value) :above ↑</pre>
+    <br>
+
+    <label for="opt">Select version</label>
+    <select id="opt">
+        <optgroup label="Group 1">
+            <option>Option 1.1</option>
+        </optgroup>
+        <optgroup label="Group 2" disabled>
+            <option>Option 2.1</option>
+            <option>Option 2.2</option>
+        </optgroup>
+        <optgroup label="Group 3">
+            <option>Option 3.1</option>
+            <option>Option 3.2</option>
+            <option>Option 3.3</option>
+        </optgroup>
+    </select>
+    <pre>(option in optgroup) in select :above ↑</pre>
+    <br>
+
+    <form oninput="result.value=parseInt(a.value)+parseInt(b.value)">
+        <input class="output" type="range" name="b" value="50"/> +
+        <input class="output" type="number" name="a" value="10"/> =
+        <output name="result"></output>
+    </form>
+    <pre>(input && output) in form :above ↑</pre>
+    <br>
+
+    <label for="story">Tell us your story:</label>
+    <textarea id="story" name="story" rows="6" cols="32">
+    It was a dark and stormy night...
+    </textarea>
+    <pre>textarea :above ↑</pre>
+    <br>
+
     <!--    Interactive elements-->
+    <details>
+        <summary>See details</summary>
+        Something small enough to escape casual notice.
+    </details>
+    <pre>summary in details :above ↑</pre>
+    <br>
+
+    <dialog open>
+        <p>Greetings, one and all!</p>
+    </dialog>
+    <pre>dialog open :above ↑</pre>
+    <br>
+
     <!--    Web Components-->
+
+    <table id="producttable">
+        <thead>
+        <tr>
+            <td>UPC_Code</td>
+            <td>Product_Name</td>
+        </tr>
+        </thead>
+        <tbody>
+        <!-- existing data could optionally be included here -->
+        </tbody>
+    </table>
+    <pre>template to table :above ↑</pre>
+    <br>
+
+    <template id="productrow">
+        <tr>
+            <td class="record"></td>
+            <td></td>
+        </tr>
+    </template>
+    <script>
+      if ('content' in document.createElement('template')) {
+
+        // Instantiate the table with the existing HTML tbody
+        // and the row with the template
+        let tbody = document.querySelector("#producttable");
+        let template = document.querySelector('#productrow');
+
+        // Clone the new row and insert it into the table
+        let clone = template.content.cloneNode(true);
+        let td = clone.querySelectorAll("td");
+        td[0].textContent = "1235646565";
+        td[1].textContent = "Stuff";
+
+        tbody.appendChild(clone);
+
+        // Clone the new row and insert it into the table
+        let clone2 = template.content.cloneNode(true);
+        td = clone2.querySelectorAll("td");
+        td[0].textContent = "0384928528";
+        td[1].textContent = "Acme Kidney Beans 2";
+
+        tbody.appendChild(clone2);
+
+      } else {
+        // Find another way to add the rows to the table because
+        // the HTML template element is not supported.
+      }
+    </script>
 </main>
 
 <section>
