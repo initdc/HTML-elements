@@ -1,0 +1,344 @@
+<!--HTML elements reference-->
+<!DOCTYPE html>
+
+<!--Main root-->
+<html lang="en">
+
+<!--Document metadata-->
+<base href="http://localhost:8080">
+<head>
+    <meta charset="UTF-8">
+    <title>title</title>
+    <link rel="icon" href="/media/fibone.svg" type="image/svg+xml">
+</head>
+
+<!--Sectioning root-->
+<body>
+
+<!--Content sectioning-->
+<header>header</header>
+
+<hr>
+<pre>hr :above ↑</pre>
+
+<nav style="float: right">nav
+    <ul>unordered list
+        <li><a href="/">Home</a></li>
+        <li><a href="/what">What</a></li>
+        <li><a href="/How">How</a></li>
+        <li><a href="/about">About</a></li>
+    </ul>
+</nav>
+
+<h1>h1</h1>
+<h2>h2</h2>
+<h3>h3</h3>
+<h4>h4</h4>
+<h5>h5</h5>
+<h6>h6</h6>
+
+
+<!--Text content-->
+<main>main
+
+    <blockquote>blockquote</blockquote>
+    <dl>dl
+        <dt>dt1</dt>
+        <dd>dd1</dd>
+
+        <dt>dt2</dt>
+        <dd>dd2-1</dd>
+        <dd>dd2-2</dd>
+
+        <dt>dt3</dt>
+        <dd>dd3-1</dd>
+        <dd>dd3-2</dd>
+        <dd>dd3-3</dd>
+    </dl>
+    <pre>dt && dd in dl :above ↑</pre>
+
+    <div>div1</div>
+    <div>div2</div>
+
+    <span>span1</span>
+    <span>span2</span>
+    <br>
+
+    <label>label1</label>
+    <label>label2</label>
+    <br>
+
+    <br>
+
+    <img src="/media/null.jpg" alt="Elephant at sunset">
+    <pre>img alt :above ↑</pre>
+
+    <figure>
+        <img src="/media/elephant-660-480.jpg" alt="Elephant at sunset" width="220">
+        <figcaption>An elephant at sunset</figcaption>
+    </figure>
+    <pre>img && figcaption in figure :above ↑</pre>
+
+    <ol>ordered list
+        <li>
+            <data value="1">list1</data>
+        </li>
+        <li>
+            <data value="2">list2</data>
+        </li>
+        <li>
+            <data value="3">list3</data>
+        </li>
+    </ol>
+    <pre>data in li :above ↑</pre>
+
+    <p>paragraph</p>
+
+    <pre>preformatted text, .  /   <    ></pre>
+
+    <!--    Inline text semantics-->
+    <a href="/media/fibone.svg" target="_blank">anchor</a>
+    <br>
+
+    <a href="/media/fibone.svg" download>download</a>
+    <br>
+
+    <a href="mailto:nowhere@mozilla.org">mailto</a>
+    <br>
+
+    <a href="tel:+11000001">+1 100 0001</a>
+    <pre>a :above ↑</pre>
+    <br>
+
+    <abbr title="Abbreviation element">abbr</abbr>
+    <br>
+
+    <p>You can use <abbr title="Cascading Style Sheets">CSS</abbr> to style your <abbr
+            title="HyperText Markup Language">HTML</abbr>.</p>
+    <br>
+
+    <p><span>This text will go left to right</span></p>
+    <p><span dir="rtl">This text will go right to left</span></p>
+    <pre>span dir :above ↑</pre>
+
+    <p><span>אה, אני אוהב להיות ליד חוף הים</span></p>
+    <p>
+        <sapn dir="rtl">אה, אני אוהב להיות ליד חוף הים</sapn>
+    </p>
+    <pre>span dir :above ↑</pre>
+
+    <br>
+
+    <p><bdo>This text will go left to right</bdo></p>
+    <p><bdo dir="rtl">This text will go right to left</bdo></p>
+    <pre>bdo dir :above ↑</pre>
+
+    <p><bdo>אה, אני אוהב להיות ליד חוף הים</bdo></p>
+    <p><bdo dir="rtl">אה, אני אוהב להיות ליד חוף הים</bdo></p>
+    <pre>bdo dir :above ↑</pre>
+
+    <br>
+
+    <p><bdo dir="rtl">This
+        <bdi>TEXT</bdi>
+        will go right to left.</bdo></p>
+    <pre>bdi :above ↑</pre>
+
+    <br>
+
+    <p>First sentence in <cite><a href="http://www.george-orwell.org/1984/0.html">Nineteen Eighty-Four</a></cite> by
+        George Orwell (Part 1, Chapter 1).</p>
+    <p>More information can be found in <cite>[ISO-0000]</cite>.</p>
+    <pre>cite :above ↑</pre>
+
+    <br>
+
+    <code>
+        #!/bin/sh
+
+        main(){
+        echo 'hello world'
+        }
+
+        main $@
+    </code>
+    <pre>code :above ↑</pre>
+    <br>
+
+    <pre>
+#!/bin/sh
+
+main(){
+    echo 'hello world'
+}
+
+main $@
+    </pre>
+    <pre>pre :above ↑</pre>
+    <br>
+
+    <p><dfn>The Internet</dfn> is a global system of interconnected networks that use the Internet Protocol Suite
+        (TCP/IP) to serve billions of users worldwide.</p>
+    <dl>
+        <dt>
+            <dfn>
+                <abbr title="World-Wide Web">WWW</abbr>
+            </dfn>
+        </dt>
+        <dd>The World-Wide Web (WWW) is a system of interlinked hypertext documents accessed on <a href="#def-internet">the
+            Internet</a>.
+        </dd>
+    </dl>
+    <pre>dfn :above ↑</pre>
+
+    <p>In HTML 5, what was previously called <em>block-level</em> content is now called <em>flow</em> content.</p>
+    <pre>em :above ↑</pre>
+
+    <p>The Latin phrase <i>Veni, vidi, vici</i> is often mentioned in music, art, and literature</p>
+    <pre>i :above ↑</pre>
+
+    <p>Save the document by pressing <kbd>Ctrl</kbd> + <kbd>S</kbd></p>
+    <pre>kdb :above ↑</pre>
+
+    <p>mark should look like this:
+        <mark>mark</mark>
+    </p>
+
+    <q>quotation</q>
+    <pre>q :above ↑</pre>
+
+    <ruby>
+        明 日
+        <rt>ming ri</rt>
+    </ruby>
+    <pre>rt in ruby :above ↑</pre>
+
+    <ruby>
+        汉
+        <rp>(</rp>
+        <rt>han</rt>
+        <rp>)</rp>
+        字
+        <rp>(</rp>
+        <rt>zi</rt>
+        <rp>)</rp>
+    </ruby>
+    <pre>rp in ruby :above ↑</pre>
+    <pre>rp provide fall-back parentheses for browsers that do not support display ruby</pre>
+
+    <ruby>
+        <rb>旧</rb>
+        <rt>jiù</rt>
+        <rb>金</rb>
+        <rt>jīn</rt>
+        <rb>山</rb>
+        <rt>shān</rt>
+
+        <rtc>San Francisco</rtc>
+    </ruby>
+    <pre>rb && rtc in ruby :above ↑</pre>
+    <pre>The end tag of rb rt rtc can be omitted in some way</pre>
+
+    <p><s>Today's Special: Salmon</s> SOLD OUT</p>
+    <pre>s :above ↑</pre>
+
+    <p>sample output from a computer program: <br>
+        <samp>Keyboard not found <br>Press F1 to continue</samp>
+    </p>
+    <pre>samp :above ↑</pre>
+
+    <p><small>Except where otherwise noted, content on this site is licensed under a Creative Commons Attribution 4.0
+        International license.</small></p>
+    <pre>small :above ↑</pre>
+
+    <strong>imperative</strong>
+    <pre>strong :above ↑</pre>
+
+    <p>The chemical formula of water: H<sub>2</sub>O</p>
+    <pre>sub :above ↑</pre>
+
+    <p>The arithmetic formula for the square : x<sup>2</sup></p>
+    <pre>sup :above ↑</pre>
+
+    <p>This article was created on
+        <time pubdate>2011-01-28</time>
+        .
+    </p>
+    <p>The concert took place on
+        <time datetime="2001-05-15 19:00">May 15</time>
+        .
+    </p>
+    <pre>time (pub | datetime) :above ↑</pre>
+
+    <p>This paragraph includes a <u>wrongy</u> spelled word.</p>
+    <pre>u :above ↑</pre>
+
+    <var>variable</var>
+    <pre>var :above ↑</pre>
+
+    <p>http://abcdefg.hijklmn.opqrst.uvwxyz.0123456789.abcdefg.hijklmn.opqrst.uvwxyz.0123456789.com</p>
+    <p>http://abcdefg
+        <wbr>
+        .hijklmn
+        <wbr>
+        .opqrst
+        <wbr>
+        .uvwxyz
+        <wbr>
+        .0123456789
+        <wbr>
+        .abcdefg
+        <wbr>
+        .hijklmn
+        <wbr>
+        .opqrst
+        <wbr>
+        .uvwxyz
+        <wbr>
+        .0123456789
+        <wbr>
+        .com
+    </p>
+    <pre>wbr :above ↑</pre>
+
+    <!--    Image and multimedia-->
+    <map name="primary">
+        <area shape="circle" href="http://example.net"/>
+        <area shape="default" nohref/>
+    </map>
+    <pre>area in map :above ↑</pre>
+
+    <audio></audio>
+
+    <!--    Embedded content-->
+    <!--    SVG and MathML-->
+    <!--    Scripting-->
+    <!--    Demarcating edits-->
+    <!--    Table content-->
+    <!--    Forms-->
+    <!--    Interactive elements-->
+    <!--    Web Components-->
+</main>
+
+<section>
+    <h2>h2</h2>
+    <article>article in section</article>
+</section>
+<pre>section :above ↑</pre>
+
+<article>article in body</article>
+
+<aside>AD: welcome to visit our project home page (AD in aside)</aside>
+
+<hr>
+
+<footer>footer
+    <p>A <a href="https://fib.one" target="_blank" style="font-weight: bold">fibone™</a> Project</p>
+    <p>Copyleft (ↄ) 2021</p>
+    <address>
+        Loudoun County, Virginia
+    </address>
+</footer>
+
+</body>
+</html>

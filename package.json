@@ -1,0 +1,10 @@
+{
+  "name": "learn-html",
+  "version": "0.0.1",
+  "main": "server.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {}
+}
