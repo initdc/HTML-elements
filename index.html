@@ -10,6 +10,12 @@
     <meta charset="UTF-8">
     <title>title</title>
     <link rel="icon" href="/media/fibone.svg" type="image/svg+xml">
+    <style>
+        data:hover:after {
+          content: ' (ID ' attr(value) ')';
+          font-size: .7rem;
+        }
+    </style>
 </head>
 
 <!--Sectioning root-->
@@ -24,9 +30,9 @@
 <nav style="float: right">nav
     <ul>unordered list
         <li><a href="/">Home</a></li>
-        <li><a href="/what">What</a></li>
-        <li><a href="/How">How</a></li>
-        <li><a href="/about">About</a></li>
+        <li><a href="https://github.com/initdc/HTML-elements" target="_blank">Repo</a></li>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element" target="_blank">Reference</a></li>
+        <li><a href="https://he.moz.one" target="_blank">Shorthand for ref: <br><code>he.moz.one</code></a></li>
     </ul>
 </nav>
 
@@ -166,6 +172,7 @@
     <br>
 
     <pre>
+        <code>
 #!/bin/sh
 
 main(){
@@ -173,8 +180,10 @@ main(){
 }
 
 main $@
+        </code>
+
     </pre>
-    <pre>pre :above ↑</pre>
+    <pre>code in pre :above ↑</pre>
     <br>
 
     <p><dfn>The Internet</dfn> is a global system of interconnected networks that use the Internet Protocol Suite

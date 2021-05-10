@@ -1,6 +1,6 @@
 ![HTML elements bg](https://github.com/initdc/pic/raw/master/html_elements_bg.png)
 # HTML elements
->  A complete example of HTML elements reference
+>  A complete example of HTML elements
 
 ## Usage
  
@@ -10,6 +10,7 @@ Browser + DevTools
 
 [Firefox 46.0b11](https://ftp.mozilla.org/pub/firefox/releases/46.0b11/) + [3D view](https://developer.mozilla.org/en-US/docs/Tools/3D_View)
 
+[Edge >= 80](https://docs.microsoft.com/en-us/microsoft-edge/devtools-guide-chromium/whats-new/2019/12/devtools#3d-view)
 
 ```
 # Disable Automatic Update for Firefox 46.0b11
@@ -28,6 +29,8 @@ if set to “false“, automatic update is disabled.
 
 ## reference
 
-[MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/HTML/Element)
+[HTML elements reference](https://developer.mozilla.org/en-US/docs/Web/HTML/Element)
 
-[Disable Automatic Update](https://www.technipages.com/enable-disable-automatic-updates-in-firefox)
+[Enable or Disable Automatic Updates in Firefox](https://www.technipages.com/enable-disable-automatic-updates-in-firefox)
+
+[Looking for 3D View in Firefox? Edge Chromium now has this feature built-in](https://techdows.com/2014/01/firefox-3d-view.html)
